@@ -1,0 +1,539 @@
+{
+ "model": "random_forest|engineered",
+ "selection": "highest dev-set CV PR-AUC (test set not used for selection)",
+ "near_boundary_rel": 0.05,
+ "threshold": 0.4581547619047621,
+ "counts": {
+  "tp": 56,
+  "fn": 11,
+  "fp": 5,
+  "tn": 1928
+ },
+ "false_negatives": [
+  {
+   "udi": 4045,
+   "product_id": "M18904",
+   "proba": 0.0,
+   "threshold": 0.4581547619047621,
+   "true_modes": [],
+   "category": "no_rule_explains",
+   "nearest_rule": "hdf",
+   "nearest_dist": -0.40000000000000036,
+   "nearest_unit": "K",
+   "nearest_margin": -0.046511627906976785,
+   "fired_rules": [],
+   "margins": {
+    "hdf": -0.046511627906976785,
+    "pwf": -0.2124341376715747,
+    "osf": -0.9205,
+    "twf": -0.9
+   },
+   "type": "M",
+   "air_temp_k": 301.9,
+   "process_temp_k": 310.9,
+   "rotational_speed_rpm": 1419.0,
+   "torque_nm": 47.7,
+   "tool_wear_min": 20.0
+  },
+  {
+   "udi": 5537,
+   "product_id": "M20396",
+   "proba": 0.0,
+   "threshold": 0.4581547619047621,
+   "true_modes": [],
+   "category": "no_rule_explains",
+   "nearest_rule": "hdf",
+   "nearest_dist": -0.9000000000000004,
+   "nearest_unit": "K",
+   "nearest_margin": -0.10465116279069772,
+   "fired_rules": [],
+   "margins": {
+    "hdf": -0.10465116279069772,
+    "pwf": -0.1436018426314224,
+    "osf": -0.4645,
+    "twf": -0.405
+   },
+   "type": "M",
+   "air_temp_k": 302.3,
+   "process_temp_k": 311.8,
+   "rotational_speed_rpm": 1363.0,
+   "torque_nm": 54.0,
+   "tool_wear_min": 119.0
+  },
+  {
+   "udi": 7511,
+   "product_id": "L54690",
+   "proba": 0.0034999999999999,
+   "threshold": 0.4581547619047621,
+   "true_modes": [
+    "twf"
+   ],
+   "category": "twf_window",
+   "nearest_rule": "twf",
+   "nearest_dist": 14.0,
+   "nearest_unit": "min",
+   "nearest_margin": 0.07,
+   "fired_rules": [
+    "twf"
+   ],
+   "margins": {
+    "hdf": -0.3139534883720944,
+    "pwf": -0.3102039917097931,
+    "osf": -0.24321818181818178,
+    "twf": 0.07
+   },
+   "type": "L",
+   "air_temp_k": 300.5,
+   "process_temp_k": 311.8,
+   "rotational_speed_rpm": 1524.0,
+   "torque_nm": 38.9,
+   "tool_wear_min": 214.0
+  },
+  {
+   "udi": 8112,
+   "product_id": "M22971",
+   "proba": 0.0256666666666666,
+   "threshold": 0.4581547619047621,
+   "true_modes": [
+    "twf"
+   ],
+   "category": "twf_window",
+   "nearest_rule": "twf",
+   "nearest_dist": 9.0,
+   "nearest_unit": "min",
+   "nearest_margin": 0.045,
+   "fired_rules": [
+    "twf"
+   ],
+   "margins": {
+    "hdf": -0.32558139534884123,
+    "pwf": -0.40188381021138586,
+    "osf": -0.42350833333333326,
+    "twf": 0.045
+   },
+   "type": "M",
+   "air_temp_k": 300.4,
+   "process_temp_k": 311.8,
+   "rotational_speed_rpm": 1553.0,
+   "torque_nm": 33.1,
+   "tool_wear_min": 209.0
+  },
+  {
+   "udi": 6173,
+   "product_id": "L53352",
+   "proba": 0.0314166666666666,
+   "threshold": 0.4581547619047621,
+   "true_modes": [
+    "twf"
+   ],
+   "category": "twf_window",
+   "nearest_rule": "twf",
+   "nearest_dist": 13.0,
+   "nearest_unit": "min",
+   "nearest_margin": 0.065,
+   "fired_rules": [
+    "twf"
+   ],
+   "margins": {
+    "hdf": -0.1427536231884058,
+    "pwf": -0.30456425112018226,
+    "osf": -0.21788181818181826,
+    "twf": 0.065
+   },
+   "type": "L",
+   "air_temp_k": 300.8,
+   "process_temp_k": 310.6,
+   "rotational_speed_rpm": 1577.0,
+   "torque_nm": 37.9,
+   "tool_wear_min": 227.0
+  },
+  {
+   "udi": 9577,
+   "product_id": "L56756",
+   "proba": 0.0401785714285714,
+   "threshold": 0.4581547619047621,
+   "true_modes": [
+    "twf"
+   ],
+   "category": "twf_window",
+   "nearest_rule": "twf",
+   "nearest_dist": 5.0,
+   "nearest_unit": "min",
+   "nearest_margin": 0.025,
+   "fired_rules": [
+    "twf"
+   ],
+   "margins": {
+    "hdf": -0.3927536231884058,
+    "pwf": -0.3398922587490501,
+    "osf": -0.5657727272727273,
+    "twf": 0.025
+   },
+   "type": "L",
+   "air_temp_k": 299.6,
+   "process_temp_k": 310.7,
+   "rotational_speed_rpm": 1922.0,
+   "torque_nm": 23.3,
+   "tool_wear_min": 205.0
+  },
+  {
+   "udi": 1764,
+   "product_id": "L48943",
+   "proba": 0.0625357142857142,
+   "threshold": 0.4581547619047621,
+   "true_modes": [
+    "twf"
+   ],
+   "category": "twf_window",
+   "nearest_rule": "twf",
+   "nearest_dist": 9.0,
+   "nearest_unit": "min",
+   "nearest_margin": 0.045,
+   "fired_rules": [
+    "twf"
+   ],
+   "margins": {
+    "hdf": -0.09492753623188406,
+    "pwf": -0.4014794427314238,
+    "osf": -0.411,
+    "twf": 0.045
+   },
+   "type": "L",
+   "air_temp_k": 298.2,
+   "process_temp_k": 307.6,
+   "rotational_speed_rpm": 1511.0,
+   "torque_nm": 31.0,
+   "tool_wear_min": 209.0
+  },
+  {
+   "udi": 6000,
+   "product_id": "M20859",
+   "proba": 0.1151944444444444,
+   "threshold": 0.4581547619047621,
+   "true_modes": [
+    "twf"
+   ],
+   "category": "twf_window",
+   "nearest_rule": "twf",
+   "nearest_dist": 6.0,
+   "nearest_unit": "min",
+   "nearest_margin": 0.03,
+   "fired_rules": [
+    "twf"
+   ],
+   "margins": {
+    "hdf": -0.2108695652173913,
+    "pwf": -0.40698948004988666,
+    "osf": -0.40525,
+    "twf": 0.03
+   },
+   "type": "M",
+   "air_temp_k": 300.4,
+   "process_temp_k": 310.2,
+   "rotational_speed_rpm": 1671.0,
+   "torque_nm": 30.5,
+   "tool_wear_min": 234.0
+  },
+  {
+   "udi": 3612,
+   "product_id": "L50791",
+   "proba": 0.1529642857142857,
+   "threshold": 0.4581547619047621,
+   "true_modes": [
+    "twf",
+    "rnf"
+   ],
+   "category": "twf_window",
+   "nearest_rule": "twf",
+   "nearest_dist": 7.0,
+   "nearest_unit": "min",
+   "nearest_margin": 0.035,
+   "fired_rules": [
+    "twf"
+   ],
+   "margins": {
+    "hdf": -0.06976744186046384,
+    "pwf": -0.2414566360265712,
+    "osf": -0.1268363636363637,
+    "twf": 0.035
+   },
+   "type": "L",
+   "air_temp_k": 301.7,
+   "process_temp_k": 310.9,
+   "rotational_speed_rpm": 1405.0,
+   "torque_nm": 46.4,
+   "tool_wear_min": 207.0
+  },
+  {
+   "udi": 2167,
+   "product_id": "M17026",
+   "proba": 0.205938492063492,
+   "threshold": 0.4581547619047621,
+   "true_modes": [
+    "twf"
+   ],
+   "category": "twf_window",
+   "nearest_rule": "twf",
+   "nearest_dist": 15.0,
+   "nearest_unit": "min",
+   "nearest_margin": 0.075,
+   "fired_rules": [
+    "twf"
+   ],
+   "margins": {
+    "hdf": -0.35289855072463766,
+    "pwf": -0.3071359193476206,
+    "osf": -0.56125,
+    "twf": 0.075
+   },
+   "type": "M",
+   "air_temp_k": 299.6,
+   "process_temp_k": 309.2,
+   "rotational_speed_rpm": 1867.0,
+   "torque_nm": 23.4,
+   "tool_wear_min": 225.0
+  },
+  {
+   "udi": 4647,
+   "product_id": "L51826",
+   "proba": 0.2530595238095237,
+   "threshold": 0.4581547619047621,
+   "true_modes": [
+    "twf"
+   ],
+   "category": "twf_window",
+   "nearest_rule": "twf",
+   "nearest_dist": 6.0,
+   "nearest_unit": "min",
+   "nearest_margin": 0.03,
+   "fired_rules": [
+    "twf"
+   ],
+   "margins": {
+    "hdf": -0.08478260869565217,
+    "pwf": -0.19875424699444325,
+    "osf": -0.021454545454545455,
+    "twf": 0.03
+   },
+   "type": "L",
+   "air_temp_k": 303.3,
+   "process_temp_k": 311.4,
+   "rotational_speed_rpm": 1497.0,
+   "torque_nm": 46.0,
+   "tool_wear_min": 234.0
+  }
+ ],
+ "false_positives": [
+  {
+   "udi": 3795,
+   "product_id": "M18654",
+   "proba": 0.6795119047619049,
+   "threshold": 0.4581547619047621,
+   "true_modes": [],
+   "category": "near_boundary_outside",
+   "nearest_rule": "hdf",
+   "nearest_dist": -2.3092638912203256e-14,
+   "nearest_unit": "K",
+   "nearest_margin": -2.685190571186425e-15,
+   "fired_rules": [],
+   "margins": {
+    "hdf": -2.685190571186425e-15,
+    "pwf": -0.23793339804321192,
+    "osf": -0.8551000000000001,
+    "twf": -0.82
+   },
+   "type": "M",
+   "air_temp_k": 302.2,
+   "process_temp_k": 310.8,
+   "rotational_speed_rpm": 1356.0,
+   "torque_nm": 48.3,
+   "tool_wear_min": 36.0
+  },
+  {
+   "udi": 4232,
+   "product_id": "L51411",
+   "proba": 0.6346785714285714,
+   "threshold": 0.4581547619047621,
+   "true_modes": [],
+   "category": "near_boundary_outside",
+   "nearest_rule": "hdf",
+   "nearest_dist": -2.3092638912203256e-14,
+   "nearest_unit": "K",
+   "nearest_margin": -2.685190571186425e-15,
+   "fired_rules": [],
+   "margins": {
+    "hdf": -2.685190571186425e-15,
+    "pwf": -0.25472113834172805,
+    "osf": -0.7653454545454544,
+    "twf": -0.73
+   },
+   "type": "L",
+   "air_temp_k": 302.2,
+   "process_temp_k": 310.8,
+   "rotational_speed_rpm": 1340.0,
+   "torque_nm": 47.8,
+   "tool_wear_min": 54.0
+  },
+  {
+   "udi": 4899,
+   "product_id": "H34312",
+   "proba": 0.6131666666666665,
+   "threshold": 0.4581547619047621,
+   "true_modes": [],
+   "category": "twf_window",
+   "nearest_rule": "hdf",
+   "nearest_dist": -80.0,
+   "nearest_unit": "rpm",
+   "nearest_margin": -0.057971014492753624,
+   "fired_rules": [
+    "twf"
+   ],
+   "margins": {
+    "hdf": -0.057971014492753624,
+    "pwf": -0.08775130656760383,
+    "osf": -0.11601538461538453,
+    "twf": 0.07
+   },
+   "type": "H",
+   "air_temp_k": 303.6,
+   "process_temp_k": 312.4,
+   "rotational_speed_rpm": 1460.0,
+   "torque_nm": 53.7,
+   "tool_wear_min": 214.0
+  },
+  {
+   "udi": 3810,
+   "product_id": "L50989",
+   "proba": 0.5565119047619048,
+   "threshold": 0.4581547619047621,
+   "true_modes": [],
+   "category": "near_boundary_outside",
+   "nearest_rule": "hdf",
+   "nearest_dist": -2.3092638912203256e-14,
+   "nearest_unit": "K",
+   "nearest_margin": -2.685190571186425e-15,
+   "fired_rules": [],
+   "margins": {
+    "hdf": -2.685190571186425e-15,
+    "pwf": -0.11092927903408863,
+    "osf": -0.6089454545454546,
+    "twf": -0.62
+   },
+   "type": "L",
+   "air_temp_k": 302.2,
+   "process_temp_k": 310.8,
+   "rotational_speed_rpm": 1350.0,
+   "torque_nm": 56.6,
+   "tool_wear_min": 76.0
+  },
+  {
+   "udi": 2706,
+   "product_id": "L49885",
+   "proba": 0.4899166666666667,
+   "threshold": 0.4581547619047621,
+   "true_modes": [],
+   "category": "near_boundary_outside",
+   "nearest_rule": "pwf",
+   "nearest_dist": -1.9759852942588623,
+   "nearest_unit": "W",
+   "nearest_margin": -0.00021955392158431802,
+   "fired_rules": [],
+   "margins": {
+    "hdf": -0.10465116279069772,
+    "pwf": -0.00021955392158431802,
+    "osf": -0.5817454545454546,
+    "twf": -0.645
+   },
+   "type": "L",
+   "air_temp_k": 299.7,
+   "process_temp_k": 309.2,
+   "rotational_speed_rpm": 1326.0,
+   "torque_nm": 64.8,
+   "tool_wear_min": 71.0
+  }
+ ],
+ "summary": {
+  "fn_by_category": {
+   "rule_near_boundary": 0,
+   "rule_deep_inside": 0,
+   "twf_window": 9,
+   "no_rule_explains": 2
+  },
+  "fp_by_category": {
+   "near_boundary_outside": 4,
+   "twf_window": 1,
+   "far_from_rules": 0,
+   "rule_fires_label_normal": 0
+  }
+ },
+ "mode_detection": {
+  "twf": {
+   "n_failures": 9,
+   "detected": 0,
+   "rate": 0.0,
+   "n_rows_with_mode": 9
+  },
+  "hdf": {
+   "n_failures": 22,
+   "detected": 22,
+   "rate": 1.0,
+   "n_rows_with_mode": 22
+  },
+  "pwf": {
+   "n_failures": 18,
+   "detected": 18,
+   "rate": 1.0,
+   "n_rows_with_mode": 18
+  },
+  "osf": {
+   "n_failures": 19,
+   "detected": 19,
+   "rate": 1.0,
+   "n_rows_with_mode": 19
+  },
+  "rnf": {
+   "n_failures": 1,
+   "detected": 0,
+   "rate": 0.0,
+   "n_rows_with_mode": 5
+  },
+  "none": {
+   "n_failures": 2,
+   "detected": 0,
+   "rate": 0.0,
+   "n_rows_with_mode": 0
+  },
+  "any": {
+   "n_failures": 67,
+   "detected": 56,
+   "rate": 0.835820895522388,
+   "n_rows_with_mode": 67
+  }
+ },
+ "margin_stats": {
+  "hdf": {
+   "n": 22,
+   "median_margin_detected": 0.011627906976744146,
+   "median_margin_missed": null,
+   "n_missed": 0,
+   "n_missed_within_5pct": 0,
+   "n_all_within_5pct": 20
+  },
+  "pwf": {
+   "n": 18,
+   "median_margin_detected": 0.0423839331195973,
+   "median_margin_missed": null,
+   "n_missed": 0,
+   "n_missed_within_5pct": 0,
+   "n_all_within_5pct": 12
+  },
+  "osf": {
+   "n": 19,
+   "median_margin_detected": 0.03145454545454546,
+   "median_margin_missed": null,
+   "n_missed": 0,
+   "n_missed_within_5pct": 0,
+   "n_all_within_5pct": 12
+  }
+ }
+}
