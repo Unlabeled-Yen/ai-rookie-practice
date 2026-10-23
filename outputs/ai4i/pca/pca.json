@@ -1,0 +1,367 @@
+{
+  "issue": 6,
+  "seed": 42,
+  "label_policy": "as_is",
+  "n_samples": 10000,
+  "n_failures": 339,
+  "failure_rate": 0.0339,
+  "method": "StandardScaler → PCA（全部主成分）；可分性探針為 5 折分層 CV × 2 次重複、class_weight=balanced 的邏輯斯迴歸，標準化與 PCA 皆在訓練折內擬合",
+  "feature_sets": {
+    "raw": {
+      "feature_set": "raw",
+      "features": [
+        "air_temp_k",
+        "process_temp_k",
+        "rotational_speed_rpm",
+        "torque_nm",
+        "tool_wear_min",
+        "type_L",
+        "type_M",
+        "type_H"
+      ],
+      "n_features": 8,
+      "explained_variance_ratio": [
+        0.239,
+        0.2302,
+        0.2283,
+        0.1465,
+        0.1249,
+        0.0158,
+        0.0153,
+        0.0
+      ],
+      "cumulative_variance": [
+        0.239,
+        0.4692,
+        0.6975,
+        0.844,
+        0.9689,
+        0.9847,
+        1.0,
+        1.0
+      ],
+      "cumulative_variance_3pc": 0.6975,
+      "n_components_90": 5,
+      "n_components_95": 5,
+      "loadings": {
+        "PC1": {
+          "air_temp_k": 0.509,
+          "process_temp_k": 0.508,
+          "rotational_speed_rpm": 0.49,
+          "torque_nm": -0.485,
+          "tool_wear_min": 0.018,
+          "type_L": 0.064,
+          "type_M": -0.043,
+          "type_H": -0.039
+        },
+        "PC2": {
+          "air_temp_k": 0.485,
+          "process_temp_k": 0.486,
+          "rotational_speed_rpm": -0.51,
+          "torque_nm": 0.514,
+          "tool_wear_min": 0.014,
+          "type_L": 0.043,
+          "type_M": -0.018,
+          "type_H": -0.042
+        },
+        "PC3": {
+          "air_temp_k": -0.067,
+          "process_temp_k": -0.067,
+          "rotational_speed_rpm": -0.012,
+          "torque_nm": 0.016,
+          "tool_wear_min": 0.011,
+          "type_L": 0.726,
+          "type_M": -0.656,
+          "type_H": -0.182
+        }
+      },
+      "pc_auc_failure": {
+        "PC1": 0.5897,
+        "PC2": 0.744,
+        "PC3": 0.5281,
+        "PC4": 0.5744,
+        "PC5": 0.6586,
+        "PC6": 0.8162,
+        "PC7": 0.5834,
+        "PC8": 0.6356
+      },
+      "mode_centroid_shift_3pc": {
+        "twf": {
+          "n": 46,
+          "shift_sd": [
+            0.233,
+            -0.015,
+            -0.087
+          ],
+          "distance_sd": 0.249
+        },
+        "hdf": {
+          "n": 115,
+          "shift_sd": [
+            -0.197,
+            1.663,
+            0.054
+          ],
+          "distance_sd": 1.676
+        },
+        "pwf": {
+          "n": 95,
+          "shift_sd": [
+            0.145,
+            -0.122,
+            0.02
+          ],
+          "distance_sd": 0.19
+        },
+        "osf": {
+          "n": 98,
+          "shift_sd": [
+            -0.95,
+            1.237,
+            0.618
+          ],
+          "distance_sd": 1.678
+        },
+        "rnf": {
+          "n": 19,
+          "shift_sd": [
+            0.11,
+            0.631,
+            0.218
+          ],
+          "distance_sd": 0.677
+        },
+        "any_failure": {
+          "n": 339,
+          "shift_sd": [
+            -0.196,
+            0.773,
+            0.171
+          ],
+          "distance_sd": 0.815
+        }
+      },
+      "cv_auc": {
+        "logreg_3pc": {
+          "mean": 0.7212,
+          "std": 0.0349,
+          "n_folds": 10
+        },
+        "logreg_all_features": {
+          "mean": 0.8992,
+          "std": 0.0131,
+          "n_folds": 10
+        }
+      }
+    },
+    "engineered": {
+      "feature_set": "engineered",
+      "features": [
+        "air_temp_k",
+        "process_temp_k",
+        "rotational_speed_rpm",
+        "torque_nm",
+        "tool_wear_min",
+        "type_L",
+        "type_M",
+        "type_H",
+        "temp_diff_k",
+        "power_w",
+        "overstrain_minnm"
+      ],
+      "n_features": 11,
+      "explained_variance_ratio": [
+        0.2741,
+        0.2058,
+        0.1663,
+        0.157,
+        0.1065,
+        0.0672,
+        0.0194,
+        0.0025,
+        0.0011,
+        0.0,
+        0.0
+      ],
+      "cumulative_variance": [
+        0.2741,
+        0.4799,
+        0.6462,
+        0.8033,
+        0.9098,
+        0.977,
+        0.9964,
+        0.9989,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "cumulative_variance_3pc": 0.6462,
+      "n_components_90": 5,
+      "n_components_95": 6,
+      "loadings": {
+        "PC1": {
+          "air_temp_k": -0.027,
+          "process_temp_k": -0.024,
+          "rotational_speed_rpm": -0.511,
+          "torque_nm": 0.549,
+          "tool_wear_min": 0.155,
+          "type_L": 0.004,
+          "type_M": -0.002,
+          "type_H": -0.003,
+          "temp_diff_k": 0.019,
+          "power_w": 0.536,
+          "overstrain_minnm": 0.354
+        },
+        "PC2": {
+          "air_temp_k": 0.662,
+          "process_temp_k": 0.563,
+          "rotational_speed_rpm": -0.002,
+          "torque_nm": 0.01,
+          "tool_wear_min": 0.055,
+          "type_L": 0.018,
+          "type_M": 0.004,
+          "type_H": -0.034,
+          "temp_diff_k": -0.487,
+          "power_w": 0.011,
+          "overstrain_minnm": 0.054
+        },
+        "PC3": {
+          "air_temp_k": -0.019,
+          "process_temp_k": -0.015,
+          "rotational_speed_rpm": 0.041,
+          "torque_nm": -0.038,
+          "tool_wear_min": 0.121,
+          "type_L": 0.718,
+          "type_M": -0.648,
+          "type_H": -0.183,
+          "temp_diff_k": 0.014,
+          "power_w": -0.035,
+          "overstrain_minnm": 0.1
+        }
+      },
+      "pc_auc_failure": {
+        "PC1": 0.7867,
+        "PC2": 0.6567,
+        "PC3": 0.5997,
+        "PC4": 0.615,
+        "PC5": 0.5756,
+        "PC6": 0.6174,
+        "PC7": 0.694,
+        "PC8": 0.6433,
+        "PC9": 0.7458,
+        "PC10": 0.7555,
+        "PC11": 0.5678
+      },
+      "mode_centroid_shift_3pc": {
+        "twf": {
+          "n": 46,
+          "shift_sd": [
+            0.286,
+            0.271,
+            0.185
+          ],
+          "distance_sd": 0.436
+        },
+        "hdf": {
+          "n": 115,
+          "shift_sd": [
+            1.238,
+            1.4,
+            0.013
+          ],
+          "distance_sd": 1.869
+        },
+        "pwf": {
+          "n": 95,
+          "shift_sd": [
+            0.27,
+            0.083,
+            0.023
+          ],
+          "distance_sd": 0.284
+        },
+        "osf": {
+          "n": 98,
+          "shift_sd": [
+            2.322,
+            0.233,
+            0.786
+          ],
+          "distance_sd": 2.462
+        },
+        "rnf": {
+          "n": 19,
+          "shift_sd": [
+            0.465,
+            0.429,
+            0.262
+          ],
+          "distance_sd": 0.685
+        },
+        "any_failure": {
+          "n": 339,
+          "shift_sd": [
+            1.015,
+            0.557,
+            0.235
+          ],
+          "distance_sd": 1.181
+        }
+      },
+      "cv_auc": {
+        "logreg_3pc": {
+          "mean": 0.7774,
+          "std": 0.0303,
+          "n_folds": 10
+        },
+        "logreg_all_features": {
+          "mean": 0.9265,
+          "std": 0.0126,
+          "n_folds": 10
+        }
+      }
+    }
+  },
+  "comparison": {
+    "cumulative_variance_3pc": {
+      "raw": 0.6975,
+      "engineered": 0.6462
+    },
+    "n_components_90": {
+      "raw": 5,
+      "engineered": 5
+    },
+    "n_components_95": {
+      "raw": 5,
+      "engineered": 6
+    },
+    "cv_auc_logreg_3pc": {
+      "raw": 0.7212,
+      "engineered": 0.7774
+    },
+    "cv_auc_logreg_all_features": {
+      "raw": 0.8992,
+      "engineered": 0.9265
+    },
+    "best_single_pc": {
+      "raw": "PC6",
+      "engineered": "PC1"
+    }
+  },
+  "discussion": [
+    "解釋變異：原始組前 3 個主成分解釋 69.8% 變異（達 90% 需 5 個）；原始＋衍生組為 64.6%（需 5 個）。衍生組前 3 個主成分的占比反而比原始組低 5.1 個百分點：總變異隨特徵數增加（11 vs 8 個標準化單位），而衍生特徵（乘積）引入了與原欄位不完全共線的新方向，變異被分散到更多主成分；無論占比升降，解釋變異只反映特徵之間的共變結構，不代表多了或少了故障資訊。",
+    "3D 圖中 339 筆故障多半落在正常樣本雲的邊緣，沒有形成獨立的群。各模式重心相對正常重心的位移（以正常組標準差為單位，前 3 個主成分，衍生組）：TWF 0.44、HDF 1.87、PWF 0.28、OSF 2.46、RNF 0.69。",
+    "線性可分性：只用前 3 個主成分的邏輯斯迴歸（PCA 在訓練折內擬合）交叉驗證 ROC-AUC，原始組 0.721、衍生組 0.777；用全部特徵的邏輯斯迴歸為 0.899 / 0.926。單一主成分中最能分辨故障的是：原始組 PC6（解釋 1.6% 變異）AUC 0.816、衍生組 PC1（解釋 27.4% 變異）AUC 0.787；若最佳主成分不是變異最大的前幾個，表示故障訊號藏在低變異方向，依變異排序截取前 3 個主成分會把它丟掉。",
+    "PCA 呈現不出故障結構的原因：(1) PCA 是非監督的，只找變異最大的方向，不看標籤；只有 3.39% 的故障樣本幾乎不影響共變異矩陣。(2) 標準化後 Type 的三個 one-hot 欄各占 1 單位變異，會吃掉部分主成分。(3) 故障由非線性、局部的門檻規則產生：HDF 是兩個條件同時成立（溫差 < 8.6 K 且轉速 < 1380 rpm），PWF 落在功率的兩端（< 3500 W 或 > 9000 W，非單調），OSF 的門檻依 Type 而變，TWF 只在磨耗 200–240 min 的窄帶，RNF 與特徵無關。這些區域是特徵空間的角落或兩端，投影到變異最大的線性方向後會和正常樣本重疊。",
+    "結論：PCA 適合檢視特徵之間的相關結構（轉速與扭矩強負相關、衍生特徵與原欄位冗餘），不適合當作故障的分群或偵測工具；要捕捉這些門檻型結構，需要樹模型等非線性方法，或直接使用與規則對應的衍生特徵（#8）。"
+  ],
+  "figures": [
+    "explained_variance.png",
+    "loadings.png",
+    "pca_3d_engineered.png",
+    "pca_3d_modes_engineered.png",
+    "pca_3d_modes_raw.png",
+    "pca_3d_raw.png"
+  ]
+}
