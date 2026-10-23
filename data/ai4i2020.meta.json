@@ -1,0 +1,9 @@
+{
+  "source_url": "https://archive.ics.uci.edu/static/public/601/ai4i+2020+predictive+maintenance+dataset.zip",
+  "uci_id": 601,
+  "downloaded": "2026-10-23",
+  "source_zip_sha256": "f601f14294bcf190f9d720676b7f0aea46a26cde9ab8ebc7b4f8174d9d26b252",
+  "sha256": "86a781eb21879efff711de9011a8d37973ceb083b61871fed9f8b6bef2c058ea",
+  "sha256_note": "sha256 為去除 BOM 後保存之 CSV 的雜湊；source_zip_sha256 為 UCI 原始 zip 的雜湊",
+  "n_rows": 10000
+}

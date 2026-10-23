@@ -1,0 +1,304 @@
+{
+  "exploration": {
+    "n_rows": 10000,
+    "n_columns": 14,
+    "dtypes": {
+      "udi": "int64",
+      "product_id": "object",
+      "type": "object",
+      "air_temp_k": "float64",
+      "process_temp_k": "float64",
+      "rotational_speed_rpm": "int64",
+      "torque_nm": "float64",
+      "tool_wear_min": "int64",
+      "machine_failure": "int64",
+      "twf": "int64",
+      "hdf": "int64",
+      "pwf": "int64",
+      "osf": "int64",
+      "rnf": "int64"
+    },
+    "missing_values": 0,
+    "duplicate_rows": 0,
+    "duplicate_product_ids": 0,
+    "n_failures": 339,
+    "failure_rate": 0.0339,
+    "mode_counts": {
+      "twf": 46,
+      "hdf": 115,
+      "pwf": 95,
+      "osf": 98,
+      "rnf": 19
+    },
+    "multi_mode_rows": 24,
+    "mode_cooccurrence": {
+      "twf": {
+        "twf": 46,
+        "hdf": 0,
+        "pwf": 1,
+        "osf": 3,
+        "rnf": 1
+      },
+      "hdf": {
+        "twf": 0,
+        "hdf": 115,
+        "pwf": 3,
+        "osf": 6,
+        "rnf": 0
+      },
+      "pwf": {
+        "twf": 1,
+        "hdf": 3,
+        "pwf": 95,
+        "osf": 12,
+        "rnf": 0
+      },
+      "osf": {
+        "twf": 3,
+        "hdf": 6,
+        "pwf": 12,
+        "osf": 98,
+        "rnf": 0
+      },
+      "rnf": {
+        "twf": 1,
+        "hdf": 0,
+        "pwf": 0,
+        "osf": 0,
+        "rnf": 19
+      }
+    },
+    "type_counts": {
+      "L": 6000,
+      "M": 2997,
+      "H": 1003
+    },
+    "failure_rate_by_type": {
+      "H": 0.020937188434695914,
+      "L": 0.03916666666666667,
+      "M": 0.02769436102769436
+    },
+    "ranges": {
+      "air_temp_k": {
+        "min": 295.3,
+        "max": 304.5
+      },
+      "process_temp_k": {
+        "min": 305.7,
+        "max": 313.8
+      },
+      "rotational_speed_rpm": {
+        "min": 1168.0,
+        "max": 2886.0
+      },
+      "torque_nm": {
+        "min": 3.8,
+        "max": 76.6
+      },
+      "tool_wear_min": {
+        "min": 0.0,
+        "max": 253.0
+      }
+    },
+    "describe": {
+      "air_temp_k": {
+        "count": 10000.0,
+        "mean": 300.005,
+        "std": 2.0,
+        "min": 295.3,
+        "25%": 298.3,
+        "50%": 300.1,
+        "75%": 301.5,
+        "max": 304.5
+      },
+      "process_temp_k": {
+        "count": 10000.0,
+        "mean": 310.006,
+        "std": 1.484,
+        "min": 305.7,
+        "25%": 308.8,
+        "50%": 310.1,
+        "75%": 311.1,
+        "max": 313.8
+      },
+      "rotational_speed_rpm": {
+        "count": 10000.0,
+        "mean": 1538.776,
+        "std": 179.284,
+        "min": 1168.0,
+        "25%": 1423.0,
+        "50%": 1503.0,
+        "75%": 1612.0,
+        "max": 2886.0
+      },
+      "torque_nm": {
+        "count": 10000.0,
+        "mean": 39.987,
+        "std": 9.969,
+        "min": 3.8,
+        "25%": 33.2,
+        "50%": 40.1,
+        "75%": 46.8,
+        "max": 76.6
+      },
+      "tool_wear_min": {
+        "count": 10000.0,
+        "mean": 107.951,
+        "std": 63.654,
+        "min": 0.0,
+        "25%": 53.0,
+        "50%": 108.0,
+        "75%": 162.0,
+        "max": 253.0
+      }
+    },
+    "by_failure": {
+      "0": {
+        "air_temp_k": 299.974,
+        "process_temp_k": 309.996,
+        "rotational_speed_rpm": 1540.26,
+        "torque_nm": 39.63,
+        "tool_wear_min": 106.694
+      },
+      "1": {
+        "air_temp_k": 300.886,
+        "process_temp_k": 310.29,
+        "rotational_speed_rpm": 1496.487,
+        "torque_nm": 50.168,
+        "tool_wear_min": 143.782
+      }
+    },
+    "correlation": {
+      "air_temp_k": {
+        "air_temp_k": 1.0,
+        "process_temp_k": 0.876,
+        "rotational_speed_rpm": 0.023,
+        "torque_nm": -0.014,
+        "tool_wear_min": 0.014,
+        "machine_failure": 0.083
+      },
+      "process_temp_k": {
+        "air_temp_k": 0.876,
+        "process_temp_k": 1.0,
+        "rotational_speed_rpm": 0.019,
+        "torque_nm": -0.014,
+        "tool_wear_min": 0.013,
+        "machine_failure": 0.036
+      },
+      "rotational_speed_rpm": {
+        "air_temp_k": 0.023,
+        "process_temp_k": 0.019,
+        "rotational_speed_rpm": 1.0,
+        "torque_nm": -0.875,
+        "tool_wear_min": 0.0,
+        "machine_failure": -0.044
+      },
+      "torque_nm": {
+        "air_temp_k": -0.014,
+        "process_temp_k": -0.014,
+        "rotational_speed_rpm": -0.875,
+        "torque_nm": 1.0,
+        "tool_wear_min": -0.003,
+        "machine_failure": 0.191
+      },
+      "tool_wear_min": {
+        "air_temp_k": 0.014,
+        "process_temp_k": 0.013,
+        "rotational_speed_rpm": 0.0,
+        "torque_nm": -0.003,
+        "tool_wear_min": 1.0,
+        "machine_failure": 0.105
+      },
+      "machine_failure": {
+        "air_temp_k": 0.083,
+        "process_temp_k": 0.036,
+        "rotational_speed_rpm": -0.044,
+        "torque_nm": 0.191,
+        "tool_wear_min": 0.105,
+        "machine_failure": 1.0
+      }
+    }
+  },
+  "label_inconsistencies": {
+    "rows": {
+      "failure_without_mode": [
+        1438,
+        2750,
+        4045,
+        4685,
+        5537,
+        5942,
+        6479,
+        8507,
+        9016
+      ],
+      "mode_without_failure": [
+        1222,
+        1303,
+        1749,
+        2073,
+        2560,
+        3066,
+        3453,
+        5472,
+        5490,
+        5496,
+        5510,
+        5554,
+        5640,
+        6092,
+        6914,
+        6961,
+        7489,
+        7869
+      ]
+    },
+    "counts": {
+      "failure_without_mode": 9,
+      "mode_without_failure": 18
+    },
+    "policy": {
+      "default": "as_is",
+      "reason": "主分析保留原始標記（machine_failure 即為實際紀錄的結果）；9 筆無模式的故障無法被規則解釋，18 筆 RNF 未計為故障屬資料產生過程的特性。另以 label_policy='drop_inconsistent' 移除這 27 筆做敏感度分析。"
+    }
+  },
+  "temporal_structure": {
+    "tool_wear_resets": 119,
+    "tool_wear_nondecreasing_fraction": 0.9880988098809881,
+    "air_temp_lag1_autocorr": 0.9994169352540043,
+    "has_temporal_structure": true
+  },
+  "feature_info": {
+    "type": {
+      "name": "產品品質等級",
+      "unit": "L/M/H（約 50% / 30% / 20%）"
+    },
+    "air_temp_k": {
+      "name": "空氣溫度",
+      "unit": "K"
+    },
+    "process_temp_k": {
+      "name": "製程溫度",
+      "unit": "K"
+    },
+    "rotational_speed_rpm": {
+      "name": "主軸轉速",
+      "unit": "rpm"
+    },
+    "torque_nm": {
+      "name": "扭矩",
+      "unit": "Nm"
+    },
+    "tool_wear_min": {
+      "name": "刀具磨耗（累積使用時間）",
+      "unit": "min"
+    }
+  },
+  "mode_info": {
+    "twf": "刀具磨耗故障（Tool Wear Failure）",
+    "hdf": "散熱不良故障（Heat Dissipation Failure）",
+    "pwf": "功率故障（Power Failure）",
+    "osf": "過度負荷故障（Overstrain Failure）",
+    "rnf": "隨機故障（Random Failure）"
+  }
+}
