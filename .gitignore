@@ -3,3 +3,6 @@ node_modules/
 .env
 __pycache__/
 .venv/
+
+# AI4I 模型檔（可由 ai4i_lab.models.get_final_model 重新產生）
+outputs/ai4i/models/**/*.joblib
